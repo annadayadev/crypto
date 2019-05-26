@@ -1,8 +1,8 @@
 class HomeController < ApplicationController
   
   def index
-    #require 'net/http'
-    #require 'json'
+    require 'net/http'
+    require 'json'
 
    #this is called an instance variable, instance variable allows us to create variable inside the action method and use them in that method
     @url = 'https://api.coinmarketcap.com/v1/ticker/'
