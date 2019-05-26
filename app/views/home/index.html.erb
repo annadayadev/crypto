@@ -1,0 +1,18 @@
+<h1>Home</h1>
+
+<br>
+<br>
+
+<!-- we will remove the equal sign in the ruby embeded, we only add that when we want to output something on the screen, otherwise then remove that if we only want ruby  -->
+<% @coins %>
+
+
+<!-- this is the code in getting all the necessary coins -->
+<% for x in @coins %>
+  <% for coin in @my_coins %>
+    <% if coin == x["symbol"] %>
+      <%= x["name"] %>: $<%= x["price_usd"] %><br /><br />
+      Rank: <%= x["rank"] %><br/><br/>
+    <% end %>
+  <% end %>
+<% end %>

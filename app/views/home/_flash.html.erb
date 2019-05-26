@@ -1,0 +1,12 @@
+
+#what we are doing is we are creating an each loop, and this is sort of integrate with the devise gem, its gonna send out a name and a message, when it sends out a flash message, so we are gonna grab those, and so for each one of those appears, we are going to style it using this css and bootstrap for the alert box with a close button
+
+<% flash.each do |name, msg| %
+  <div class="alert alert-warning alert-dismissible">
+    <button class="close" data-dismiss="alert">
+      <i class="glyhicon glyphicon-remove-circle"></i>
+    </button>
+    <%= content_tag(:div, msg) %>
+  </div>
+<% end %>
+
